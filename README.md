@@ -1,4 +1,4 @@
-# study_android 정리노트
+# Study Android
 
 ## 목차   
  - [TextView](#TextView)
