@@ -5,6 +5,7 @@
  - [EditText](#edittext)
  - [intent](#intent)   
  - [Image View](#image-view)
+ - [list](#list)
    
 ## TextView   
  - TextView 는 말그대로 Hello world 와 같이 문자를 넣어주는 것을 이야기한다.
@@ -247,6 +248,3 @@ public class MainActivity extends AppCompatActivity {
 ~~~   
    
 [목차로 돌아가기](#목차)   
-   
-## Navigation Menu   
- - 
