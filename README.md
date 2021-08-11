@@ -1,10 +1,11 @@
-# study_android 정리노트
+# Study Android
 
 ## 목차   
  - [TextView](#TextView)
  - [EditText](#edittext)
  - [intent](#intent)   
  - [Image View](#image-view)
+ - [list](#list)
    
 ## TextView   
  - TextView 는 말그대로 Hello world 와 같이 문자를 넣어주는 것을 이야기한다.
@@ -247,6 +248,9 @@ public class MainActivity extends AppCompatActivity {
 ~~~   
    
 [목차로 돌아가기](#목차)   
+<<<<<<< HEAD
    
 ## WebView   
  - 안드로이드 화면에서 자신이 원하는 인터넷 주소같은 것을 띄울 수 있게된다. 
+=======
+>>>>>>> cb6f0d43a5e85fca945f74ce66091f334bc2416a
