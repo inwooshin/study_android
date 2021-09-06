@@ -20,7 +20,7 @@ class OpenActivity : AppCompatActivity() {
     }
 
     companion object {
-        private const val DURATION : Long = 2500
+        private const val DURATION : Long = 1000
     }
 
     override fun onBackPressed() {

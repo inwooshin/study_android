@@ -2,27 +2,32 @@ package com.inwooshin.fixed_habit
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayout
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.active_main.*
+import kotlinx.android.synthetic.main.active_main.*
 import kotlinx.android.synthetic.main.fragment_calender.*
 
 class MainActivity : AppCompatActivity() {
+
     lateinit var tab1:ToDoList
-    lateinit var tab2:Diary
-    lateinit var tab3:Calender
+    lateinit var tab2:Calender
+    lateinit var tab3:Diary
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.active_main)
 
         tab1 = ToDoList()
-        tab2 = Diary()
-        tab3 = Calender()
+        tab2 = Calender()
+        tab3 = Diary()
 
         supportFragmentManager.beginTransaction().add(R.id.frameLayout, tab1).commit()
 
-        tab_layout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
+        Log.e("Error", "기본 띄우기")
+
+        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 when(tab?.position){
                     0 -> {
@@ -38,11 +43,11 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
-                TODO("Not yet implemented")
+                //TODO("Not yet implemented")
             }
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
-                TODO("Not yet implemented")
+                //TODO("Not yet implemented")
             }
         })
     }
