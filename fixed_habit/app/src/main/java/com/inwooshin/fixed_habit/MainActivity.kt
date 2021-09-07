@@ -1,13 +1,13 @@
 package com.inwooshin.fixed_habit
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.active_main.*
-import kotlinx.android.synthetic.main.active_main.*
 import kotlinx.android.synthetic.main.fragment_calender.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,8 +24,6 @@ class MainActivity : AppCompatActivity() {
         tab3 = Diary()
 
         supportFragmentManager.beginTransaction().add(R.id.frameLayout, tab1).commit()
-
-        Log.e("Error", "기본 띄우기")
 
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
             override fun onTabSelected(tab: TabLayout.Tab?) {
@@ -50,6 +48,10 @@ class MainActivity : AppCompatActivity() {
                 //TODO("Not yet implemented")
             }
         })
+
+        tabLayout.getTabAt(0)?.setIcon(R.drawable.list)
+        tabLayout.getTabAt(1)?.setIcon(R.drawable.calender)
+        tabLayout.getTabAt(2)?.setIcon(R.drawable.diary)
     }
 
     private fun replaceView(tab: Fragment) {
