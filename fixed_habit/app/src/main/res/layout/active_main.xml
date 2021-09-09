@@ -27,9 +27,10 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.2"
         app:tabIndicator="@null"
-        app:tabSelectedTextColor="#000000"
+        app:tabSelectedTextColor="#00BCD4"
         app:tabTextColor="#B5B5B5"
         app:tabRippleColor="@null"
+        android:outlineAmbientShadowColor="#000000"
 
         android:theme="@style/AppTheme"
         >
