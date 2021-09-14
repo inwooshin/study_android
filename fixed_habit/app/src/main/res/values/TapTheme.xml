@@ -2,12 +2,15 @@
 <resources>
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
 
-        <item name="colorPrimary">#00BCD4</item> <!-- 로고만 바뀜..? -->
+        <item name="colorPrimary">#000000</item> <!-- 로고만 바뀜..?  00BCD4-->
 
-        <item name="android:textColorPrimary"> #000000</item>       <!-- 탭바 선택된 텍스트 -->
-        <item name="android:textColorSecondary">#000000</item>     <!-- 탭바 텍스트 -->
+        <item name="android:textColorPrimary"> #000000</item>       탭바 선택된 텍스트
+        <item name="android:textColorSecondary">#000000</item>     탭바 텍스트
+        <item name="colorAccent">@android:color/white</item>
+    </style>
 
-        <item name="colorAccent">@android:color/white</item>                    <!-- 하단 움직이는 바 색-->
+    <style name="tab_text" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">11sp</item>
     </style>
 
 </resources>
