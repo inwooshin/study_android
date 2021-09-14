@@ -3,6 +3,7 @@ package com.inwooshin.fixed_habit
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.size
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.active_main.*
@@ -52,6 +53,7 @@ class MainActivity : AppCompatActivity() {
         tabLayout.getTabAt(0)?.setIcon(R.drawable.list)
         tabLayout.getTabAt(1)?.setIcon(R.drawable.calender)
         tabLayout.getTabAt(2)?.setIcon(R.drawable.diary)
+
     }
 
     private fun replaceView(tab: Fragment) {
