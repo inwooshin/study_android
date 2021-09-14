@@ -10,7 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-
         >
 
     <FrameLayout
@@ -21,20 +20,23 @@
 
     </FrameLayout>
 
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:layout_weight="0.2"
         app:tabIndicator="@null"
-        app:tabSelectedTextColor="#00BCD4"
+
+        android:elevation="1dp"
+        app:tabSelectedTextColor="#000000"
         app:tabTextColor="#B5B5B5"
         app:tabRippleColor="@null"
-        android:outlineAmbientShadowColor="#000000"
-
+        app:tabTextAppearance="@style/tab_text"
+        android:background="@drawable/outline"
         android:theme="@style/AppTheme"
         >
-        <!-- tabIndicator 가 밑에 바다!-->
+        <!-- tabIndicator 가 밑에 바닥! B5B5B5-->
 
 
         <com.google.android.material.tabs.TabItem
@@ -55,6 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="칭찬 일기"
+
 
             />
     </com.google.android.material.tabs.TabLayout>
