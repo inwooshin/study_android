@@ -3,15 +3,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Calender">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Calender"
+    android:fitsSystemWindows="true"
+    >
+    <!-- fitsSystemWindows 항목을 true 해주면 상태바 밑에 들어간다. -->
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="캘린더"
-        android:textColor="#000000"
-        android:textSize="30dp" />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/toolbar_outline"
+        tools:ignore="MissingConstraints"
+        android:theme="@style/AppTheme"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        >
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+        >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:text="달력"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:layout_weight="9.5"
+            />
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/setup"
+            app:tint="#555555"
+            android:layout_weight="0.5"
+            />
+
+    </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
 
 </FrameLayout>
