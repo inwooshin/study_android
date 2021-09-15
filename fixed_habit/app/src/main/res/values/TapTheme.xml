@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
-
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">#000000</item> <!-- 로고만 바뀜..?  00BCD4-->
+        <item name="colorPrimaryDark"> #000000</item>
+        <item name="colorAccent">#000000</item>
 
-        <item name="android:textColorPrimary"> #000000</item>       탭바 선택된 텍스트
-        <item name="android:textColorSecondary">#000000</item>     탭바 텍스트
-        <item name="colorAccent">@android:color/white</item>
+        <item name="windowActionBar"> false</item>
+        <item name="windowNoTitle"> true</item>
     </style>
 
     <style name="tab_text" parent="TextAppearance.Design.Tab">
