@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.view.Window
+import android.view.WindowManager
 
 class OpenActivity : AppCompatActivity() {
 
@@ -17,6 +19,13 @@ class OpenActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         },DURATION)
+
+        val w: Window = window
+        w.setFlags(
+            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+        )
+
     }
 
     companion object {
