@@ -43,12 +43,13 @@
 
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/setup_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/setup"
             app:tint="#555555"
             android:layout_weight="0.5"
+            android:background="#ffffff"
             />
 
     </LinearLayout>
