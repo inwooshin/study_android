@@ -28,7 +28,7 @@
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="1.2"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -38,7 +38,8 @@
             android:text="달력"
             android:textColor="#000000"
             android:textSize="15dp"
-            android:layout_weight="9.5"
+            android:layout_marginTop="5dp"
+            android:layout_weight="8.8"
             />
 
 
@@ -48,8 +49,9 @@
             android:layout_height="wrap_content"
             android:src="@drawable/setup"
             app:tint="#555555"
-            android:layout_weight="0.5"
-            android:background="#ffffff"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_marginRight="10dp"
+            android:padding="5dp"
             />
 
     </LinearLayout>
