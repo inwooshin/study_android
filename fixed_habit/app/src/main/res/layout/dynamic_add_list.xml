@@ -2,12 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="140dp"
-    android:layout_height="120dp"
+    android:layout_width="150dp"
+    android:layout_height="90dp"
     android:orientation="vertical"
-    android:layout_marginLeft="15dp"
-    android:layout_marginTop="15dp"
-    android:layout_marginBottom="15dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
     >
 
 
@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:text="달리기"
                 android:textSize="18dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:textColor="#000000"
                 />
 
@@ -44,7 +44,7 @@
                 android:text="PM 7:30"
                 android:textSize="13dp"
                 android:textColor="#777777"
-                android:layout_marginTop="23dp"
+                android:layout_marginTop="5dp"
                 />
 
             <TextView
@@ -54,7 +54,7 @@
                 android:text="월, 수, 금"
                 android:textSize="13dp"
                 android:textColor="#777777"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="1dp"
                 />
 
         </LinearLayout>
@@ -71,10 +71,10 @@
                 android:id="@+id/add_list_img"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
                 android:layout_marginBottom="16dp"
-                android:src="@drawable/ic_run"
+                app:srcCompat="@drawable/ic_run"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:tint="@color/black" />
