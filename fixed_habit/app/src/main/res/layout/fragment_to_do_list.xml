@@ -9,9 +9,12 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
+        android:scrollbars="vertical"
+
         >
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -22,73 +25,124 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1.2"
-                />
-            <TextView
-                android:layout_width="wrap_content"
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:paddingRight="10dp"
-                android:text="할 일"
-                android:textColor="#000000"
-                android:textSize="15dp"
-                android:layout_marginTop="5dp"
-                android:layout_weight="8.8"
-                />
+                android:orientation="horizontal"
+                >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.2"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingRight="10dp"
+                    android:text="할 일"
+                    android:textColor="#000000"
+                    android:textSize="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="8.8"
+                    />
 
 
-            <ImageView
-                android:id="@+id/setup_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/setup"
-                app:tint="#555555"
-                android:background="?selectableItemBackgroundBorderless"
-                android:layout_marginRight="10dp"
-                android:padding="5dp"
-                />
+                <ImageView
+                    android:id="@+id/setup_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/setup"
+                    app:tint="#555555"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:layout_marginRight="10dp"
+                    android:padding="5dp"
+                    />
 
-        </LinearLayout>
-
+            </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="600dp"
-
-            />
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:text="오늘 할일"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:drawableLeft="@drawable/ic_title_right"
+            android:drawableTint="@color/black"
+            />
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                />
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|end"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                android:padding="40dp"
-                app:srcCompat="@drawable/plus"
-                android:background="@drawable/button"
-                />
-        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/add_list_rv"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:listitem="@layout/dynamic_add_list"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="10dp"
+            />
+
+        <View
+            android:layout_width="350dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/outline_bottom"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전체 할일"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:drawableLeft="@drawable/ic_title_right"
+            android:drawableTint="@color/black"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/add_list_rv_today"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:listitem="@layout/dynamic_add_list"
+            android:scrollbars="vertical"
+            android:background="@drawable/outline_bottom"
+            android:layout_marginLeft="20dp"
+            android:elevation="1dp"
+            />
+
     </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="24dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:tint="@color/black"
+            android:backgroundTint="#D0F5FD"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/add" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
