@@ -22,11 +22,7 @@ class ToDoList : Fragment() {
     private var mainAdapter: MainAdapter? = null
     private var recyclerView: RecyclerView? = null
     private var linearLayoutManager: LinearLayoutManager? = null
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-
-    }
+    private var intentOk = 1
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
@@ -60,12 +56,32 @@ class ToDoList : Fragment() {
             mainAdapter!!.notifyDataSetChanged()
              */
 
-
             val intent = Intent(activity, AddPropertyActivity::class.java)
-            startActivity(intent)
+            startActivityForResult(intent, 100)
         }
 
+
+
         return rootView
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == intentOk) {
+            when (requestCode) {
+                100 -> {
+
+                    var mainData = MainData(R.drawable.ic_run,
+                        data!!.getStringExtra("name").toString(), //습관 이름
+                        data!!.getStringExtra("time").toString(), //습관 시간
+                        data!!.getStringExtra("award").toString()) //보상
+
+                    arrayList!!.add(mainData)
+                    mainAdapter!!.notifyDataSetChanged()
+
+                }
+            }
+        }
     }
 
 }
