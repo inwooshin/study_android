@@ -60,8 +60,6 @@ class ToDoList : Fragment() {
             startActivityForResult(intent, 100)
         }
 
-
-
         return rootView
     }
 
