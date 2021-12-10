@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="test">
+        <!-- 이런식으로 엄격하게 써줘야 된다고함!-->
+        <!-- 그게 아니라 <item>홍드로이드</item> 이럴경우 안됨 -->
+        <item name="홍드로이드" type="id">홍드로이드</item>
+        <item name="신인우" type="id">신인우</item>
+        <item name="협업" type="id">협업</item>
+    </string-array>
+</resources>
